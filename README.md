@@ -56,7 +56,7 @@ This is a project for the second semester API elective exam project self-chosen 
 |Name| Method| Path| Short Desc| Expected Input 
 |--|--|--|--|--|
 |FEEDBACK ENDPOINTS <br> (lecturer)| GET | /api/feedbacks/lecturer | Get all the feedback that a lecturer received from students (with random name)|	Need `x-authentication-token` as HEADER to be able to authenticate the user|
-|FEEDBACK ENDPOINTS <br> (lecturer)|	PUT |	/api/feedbacks/lecturer/:feedbackId	| Update a feedback that it is read by the lecturer |	Need “x-authentication-token” as HEADER to be able to authenticate the user <br> The number that goes in place of the feedbackId will be updated to SEEN (is_read = 1) Default value for all feedback is “0”
+|FEEDBACK ENDPOINTS <br> (lecturer)|	PUT |	/api/feedbacks/lecturer/:feedbackId	| Update a feedback that it is read by the lecturer |	Need `x-authentication-token` as HEADER to be able to authenticate the user <br> The number that goes in place of the feedbackId will be updated to SEEN (is_read = 1) Default value for all feedback is “0”
 |FEEDBACK ENDPOINTS <br> (lecturer)|	GET |	/api/feedbacks/lecturer/seen |	Show all the feedback connected to the current logged in user that is not seen yet.(Unread) |	Need `x-authentication-token` as HEADER to be able to authenticate the user|
 | FEEDBACK ENDPOINTS <br> (All User) | 	GET	 | /api/feedbacks/all/:lecturerId | This returns all feedbacks connected to a selected lecturer by ID |	Need `x-authentication-token` as HEADER to be able to authenticate the user (reachable for ALL registered user) | 
  | INSTITUTIONS ENDPOINTS | GET |	/api/institutions	 | Returns all institutions from the Database  |  Need `x-authentication-token` as HEADER to be able to authenticate the user (reachable for ALL registered user) | 
